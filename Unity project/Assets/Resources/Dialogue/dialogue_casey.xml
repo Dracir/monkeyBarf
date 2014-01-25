@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<dialog name="Casey">
+	<Brush-off text="Oh man... Stieg has no idea I'm married..." />
+
+	<opener id="0">
+		<response text="I'm not. Free food and drink, interesting conversation... though you have to be talking to the right person for that." >	
+	</opener>
+	
+	<opener id="1">
+		<response text="Sad? Sure, I guess. I'm having a great time though! It's not often someone chats me up like this! How about you?" />
+	</opener>
+					
+	<opener id="2">
+		<question text="What? So soon? Maybe Stieg will go with me." >
+			<answer text="No, you go alone!">
+				<script function="disappear" param="Casey"/>
+			</answer>
+			<answer text="Okay, both of you leave!">
+				<script function="disappear" param="Casey"/>
+				<script function="disappear" param="Stieg"/>
+			</answer>
+			<answer text="No, you stay! And turn around!">
+				<script function="flipAdultModels" param="yAxis" />
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="3">
+		<question text="Ooh, fun! Okay. If you had one super-power, what would it be?">
+			<answer text="Time powers!">
+				<question text="Really! What kind of time powers?">
+					<answer text="Slow people down!">
+						<script function="setAnimationTimeScale" param="0.5f" />
+					</answer>
+					<answer text="Speed people up!">
+						<script function="setAnimationTimeScale" param="2f" />
+					</answer>
+					<answer text="Stop people dead!">
+						<script function="setAnimationTimeScale" param="0" />
+					</answer>
+				</question>
+			</answer>
+			<answer text="Flight!">
+				<script function="snakeLimbs"/>
+			</answer>
+			<answer text="Super strength!">
+				<script function="superStrength"/>
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="4">
+		<question text="Who cares? It's what happens before death that counts. What do you want to be when you grow up?" >
+			<answer text="A fish!">
+				<script function="changeHeadModels" param="fish" />
+			</answer>
+			<answer text="A game developer!">
+				<script function="changeTorsoModels" param="arcade" />
+			</answer>
+			<answer text="Interior designer!">
+				<script function="spawn" param="circleFurniture" />
+			</answer>
+		</question>
+	</opener>
+	
+	
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="plantin" />
+			</answer>
+			<answer text="cavendich">
+				<response text="cavendich" />
+			</answer>
+			<answer text="small ones">
+				<response text="smallBananas" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

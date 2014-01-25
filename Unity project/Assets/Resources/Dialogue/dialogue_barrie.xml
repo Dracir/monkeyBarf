@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<dialog name="Barrie">
+	<Brush-off text="[Casey seems to be asleep]" />
+	
+	<opener id="0">
+		<question text="Boredom only gets worse as you get older. I empathise. I'll spawn you something. What would you like?" >
+			<answer text="A ball room!">
+				<script function="spawn" param="balls" />
+			</answer>
+			<answer text="Cats!">
+				<script function="spawn" param="cats" />
+			</answer>
+			<answer text="Toys!">
+				<script function="spawn" param="toys" />
+			</answer>
+		</question>	
+	</opener>
+	
+	<opener id="1">
+		<response text="I've been sad for years. You get over it. The trick is to avoid feeling sorry for yourself. Your mother is very strong. Stronger than her new partner anyway, hah! Jean would probably cry at my funeral, and we've only met twice!" />
+	</opener>
+	
+	<opener id="2">
+		<question text="Why?" >
+			<answer text="You're boring!">
+				<question text="What would you rather I be?">
+				</question>
+			</answer>
+			<answer text="Okay, both of you leave!">
+				<script function="disappear" param="Casey"/>
+				<script function="disappear" param="Stieg"/>
+			</answer>
+			<answer text="No, you stay! And turn around!">
+				<script function="flipAdultModels" param="yAxis" />
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="3">
+		<question text="Hmm.... What's the worst condition to live with?">
+			<answer text="Parkinson's!">
+				<script function="noClip"/>
+			</answer>
+			<answer text="Dyslexia!">
+				<script function="snakeLimbs"/>
+			</answer>
+			<answer text="Epilepsy!">
+				<script function="beethoven"/>
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="4">
+		<resp text="I like to think you just get to rest." />
+	</opener>
+	
+	
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="plantin" />
+			</answer>
+			<answer text="cavendich">
+				<response text="cavendich" />
+			</answer>
+			<answer text="small ones">
+				<response text="smallBananas" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

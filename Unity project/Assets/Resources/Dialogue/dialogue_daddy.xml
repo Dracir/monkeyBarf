@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<dialog name="Daddy">
+	<Brush-off text="What's the matter, kid?" />
+
+	<opener id="0">
+		<question text="Okay. Me too. What do you want me to do about it?" >
+			<answer text="Carry me around!">
+				<script function="daddyMount" />
+			</answer>
+			<answer text="Catch fire!">
+				<script function="particlesFromSky" param="fire"/>
+			</answer>
+			<answer text="Dance party!">
+				<script function="playAdultAnimations" param="dance" />
+			</answer>
+		</question>
+	</opener>
+					
+	<opener id="1">
+		<response text="Sure, yeah. I just don't know why we have to be so sombre. I don't think I've heard anyone laugh today..." />
+	</opener>
+					
+	<opener id="2">
+		<question text="What? Seriously?" >
+			<answer text="Yes.">
+				<script function="disappear" param="Daddy"/>
+			</answer>
+			<answer text="No just kidding. I want 2 daddies also!">
+				<script function="clone" param="Daddy"/>
+			</answer>
+			<answer text="I want everyone to disappear!">
+				<script function="disappear" param="all" />
+			</answer>
+		</question>
+	</opener>
+	
+	<opener id="3">
+		<question text="Haha what? Okay. What was the leading cause of death in the 19th century?">
+			<answer text="Pirates!">
+				<script function="changeLegModels" param="pegLeg" />
+			</answer>
+			<answer text="War!">
+				<script function="war"/>
+			</answer>
+			<answer text="Drowning!">
+				<script function="underwater"/>
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="4">
+		<question text="Good question! I don't know, buddy. What do you think happens?" >
+			<answer text="Reincarnated as squirrels!">
+				<script function="squirrels"/>
+			</answer>
+			<answer text="Reincarnated as kitties!">
+				<script function="cats"/>
+			</answer>
+			<answer text="Reincarnated as fish!">
+				<script function="fish"/>
+			</answer>
+		</question>
+	</opener>
+	
+	
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="banana" />
+			</answer>
+			<answer text="cavendich">
+				<response text="banana" />
+			</answer>
+			<answer text="small ones">
+				<response text="banana" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<dialog name="Jean">
+	<Brush-off text="[Jean's just crying]" />
+
+	<opener id="0">
+		<response text="Sorry about that... but I don't think I can help." />
+	</opener>
+					
+	<opener id="1">
+		<question text="What do you think?" >
+			<answer text="Your face is leaking!">
+				<script function="addToAdultModels" param="rainParticle" />
+			</answer>
+			<answer text="It's cold in here!">
+				<script function="particlesFromSky" param="snow" />
+			</answer>
+			<answer text="You're a baby!">
+				<script function="changeAdultMaterials" param="babies" />
+			</answer>
+		</question>
+	</opener>
+					
+	<opener id="2">
+		<question text="Augh! How could you be so insensitive? In my own house!" >
+			<answer text="It's my house! Go away!" >
+				<script function="disappear" />
+			</answer>
+			<answer text="I'm sorry!" >
+				<activate tag="love" />
+				<response text="Oh, honey... it's a very emotional time. I love you, okay? Please don't say that sort of thing.">
+			</answer>
+			<answer text="You are evil!" >
+				<script function="evilPeople" />
+			</answer>
+		</question>
+	</opener>
+	
+	<opener id="3">
+		<response text="I'm not in the mood, sorry. Tomorrow, okay?"/>
+		
+	</opener>
+	
+	<opener id="4">
+		<question text="God grants you your greatest desire in heaven. What will you ask for?" >
+			<answer text="The most annoying sound ever!">
+				<script function="annoyingSound" />
+			</answer>
+			<answer text="A bigger house!">
+				<script function="biggerHouse" />
+			</answer>
+			<answer text="Angels!">
+				<script function="addToAdultModels" param="angels"/>
+			</answer>
+		</question>
+	</opener>
+	
+	
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="plantin" />
+			</answer>
+			<answer text="cavendich">
+				<script function="cavendich" />
+			</answer>
+			<answer text="small ones">
+				<script function="smallBananas" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

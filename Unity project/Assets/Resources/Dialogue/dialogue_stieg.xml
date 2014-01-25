@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<dialog name="Stieg">
+	<Brush-off text="Git! I'm trying to chat up your mom's friend!" />
+
+	<opener id="0">
+		<question text="Haha! Sure you are. So what would you like, o lord of the party?" >
+			<answer text="Trees in the house!">
+				<script function="changeFurnitureModels" param="tree" />
+			</answer>
+			<answer text="Vibrators!">
+				<script function="vibrateAdultModels" />
+			</answer>
+			<answer text="Animals!">
+				<script function="changeFurnitureModels" param="randomAnimal" />
+			</answer>
+		</question>
+	</opener>
+					
+	<opener id="1">
+		<response text="I guess I should be, but I didn't know her super well. Honestly it's your mom that makes me sad at this point. I can only imagine - if I were to loser your dad like that, I'd be a wreck too. Sorry, I'm rambling." />
+	</opener>
+					
+	<opener id="2">
+		<question text="Aw, man! Come on, I think I'm really making progress with your mom's work friend. Please can I stay?" >
+			<answer text="No!">
+				<script function="disappear" param="Stieg" />
+			</answer>
+			<answer text="Okay, but only if you spend the rest of the party on your head!">
+				<script function="flipAdultModels" param="zAxis"/>
+			</answer>
+			<answer text="Okay but you're bananas now!">
+				<script function="changeLegModels" param="banana" />
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="3">
+		<question text="Okay, kid. What's your favourite movie?">
+			<answer text="The Matrix!">
+				<script function="changeWallpaper" param="code"/>
+			</answer>
+			<answer text="Anaconda!">
+				<script function="changeArmModels" param="snake"/>
+			</answer>
+			<answer text="Beethoven Lives Upstairs!">
+				<script function="playSound" param="beethoven"/>
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="4">
+		<question text="Not much of anything I imagine. Probably everything changes colour. What colour do you think is the afterlife colour?" >
+			<answer text="Blue!">
+				<script function="changeColour" param="blue" />
+			</answer>
+			<answer text="Fuchsia!">
+				<script function="changeColour" param="fuchsia" />
+			</answer>
+			<answer text="Chartreuse!">
+				<script function="changeColour" param="chartreuse" />
+			</answer>
+		</question>
+	</opener>
+	
+	
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="plantin" />
+			</answer>
+			<answer text="cavendich">
+				<response text="cavendich" />
+			</answer>
+			<answer text="small ones">
+				<response text="smallBananas" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

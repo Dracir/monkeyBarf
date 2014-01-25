@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<dialog name="Alex">
+	<Brush-off text="The rules say I'm not supposed to talk to you right now." />
+
+	<opener id="0">
+		<question text="Really? But death is so fascinating. Aren't you curious to know what happens when we die?" >
+			
+			<answer text="Yes!">
+				<activate tag="death" />
+			</answer>
+			<answer text="No!">
+				<activate tag="death" />
+			</answer>
+			<answer text="Maybe I don't know!">
+				<activate tag="death" />
+			</answer>
+		</question>
+	</opener>
+					
+	<opener id="1">
+		<question text="No, I don't see the need to be sad for this sort of thing. I like to remember good things. What do you like to think about to make yourself happy?" >
+			<answer text="Pandemonium!" >
+				<script function="changeAdultModels" param="randomModel" />
+			</answer>
+			<answer text="Flowers!">
+				<script function="addToAllModels" param="flowers" />
+			</answer>
+			<answer text="Woodland creatures!">
+				<script function="changeArmModels" param="squirrel" />
+			</answer>
+		</question>
+	</opener>
+					
+	<opener id="2">
+		<response text="You don't want me to leave. I'm awesome." />
+		
+	</opener>
+	
+	<opener id="3">
+		<question text="If you could have something instead of a head, what would it be?">
+			<answer text="A skull!">
+				<script function="changeHeadModels" param="skull"/>
+			</answer>
+			<answer text="A helmet!">
+				<script function="changeHeadModels" param="helmet"/>
+			</answer>
+			<answer text="A watermelon!">
+				<script function="changeHeadModels" param="watermelon"/>
+			</answer>
+		</question>
+		
+	</opener>
+	
+	<opener id="4">
+		<response text="Eventual decomposition of the tissues and evaporation of the blood, feeding certain organisms that live in the ground. Unless you're cremated, which is just a waste.'" >
+	</opener>
+	
+	
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="plantin" />
+			</answer>
+			<answer text="cavendich">
+				<response text="cavendich" />
+			</answer>
+			<answer text="small ones">
+				<response text="smallBananas" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

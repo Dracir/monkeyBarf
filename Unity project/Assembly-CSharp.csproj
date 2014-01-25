@@ -57,12 +57,16 @@
      <Compile Include="Assets\Scripts\Dialog\Reactions\Reactions.cs" />
      <Compile Include="Assets\Scripts\Dialog\Reactions\ScriptCall.cs" />
      <Compile Include="Assets\Scripts\Dialog\Reactions\SimpleResponse.cs" />
+     <Compile Include="Assets\Scripts\utils\GuiScript.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Resources\Dialogue\dialogue.xml" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Resources\Dialogue\dialogue_mommy.xml" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
-     <None Include="Assets\Dialog\Bob.xml" />
+     <None Include="Assets\Resources\Dialogue\dialogue_template.xml" />
+     <None Include="Assets\Resources\Dialogue\Bob.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

@@ -85,7 +85,7 @@ GameObject:
   - 114: {fileID: 363072725}
   m_Layer: 0
   m_Name: The Game
-  m_TagString: Untagged
+  m_TagString: TheGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffee8beabc860574bb2d6c7486f8dc35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &363072726
 Transform:
   m_ObjectHideFlags: 0

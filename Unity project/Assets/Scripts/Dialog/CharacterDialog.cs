@@ -8,11 +8,15 @@ public class CharacterDialog : MonoBehaviour {
 
 	public string brushOff;
 	public string characterName;
-
 	public List<Openner> openners;
 
+	private DialogSystem dialogSystem;
+
 	void Start () {
+		dialogSystem = GameObject.FindGameObjectWithTag ("TheGame").GetComponent<DialogSystem> ();
 		DialogLoader.Load (dialogFile, this);
+		
+		dialogSystem.startDialogWith (this);
 	}
 
 
@@ -22,6 +26,6 @@ public class CharacterDialog : MonoBehaviour {
 
 
 	void OnMouseDown()  { 
-		Debug.Log (this.brushOff);
+		dialogSystem.startDialogWith (this);
 	}
 }

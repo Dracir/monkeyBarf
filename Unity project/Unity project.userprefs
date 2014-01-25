@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Dialog\DialogSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\utils\Textf.cs">
     <Files>
-      <File FileName="Assets\Scripts\Dialog\CharacterDialog.cs" Line="19" Column="39" />
-      <File FileName="Assets\Scripts\Dialog\DialogSystem.cs" Line="4" Column="38" />
-      <File FileName="Assets\Scripts\Dialog\DialogLoader.cs" Line="16" Column="43" />
-      <File FileName="Assets\Scripts\Dialog\Reactions\SimpleResponse.cs" Line="6" Column="2" />
-      <File FileName="Assets\Scripts\Dialog\Reactions\Answer.cs" Line="6" Column="2" />
-      <File FileName="Assets\Scripts\Dialog\Reactions\ScriptCall.cs" Line="4" Column="33" />
-      <File FileName="Assets\Scripts\Dialog\Reactions\Activation.cs" Line="8" Column="19" />
+      <File FileName="Assets\Scripts\Dialog\DialogSystem.cs" Line="37" Column="98" />
+      <File FileName="Assets\Scripts\Dialog\SlowTextWriter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Dialog\CharacterDialog.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\utils\GuiScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\utils\Textf.cs" Line="40" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

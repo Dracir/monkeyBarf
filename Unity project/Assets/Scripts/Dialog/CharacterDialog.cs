@@ -16,7 +16,7 @@ public class CharacterDialog : MonoBehaviour {
 		dialogSystem = GameObject.FindGameObjectWithTag ("TheGame").GetComponent<DialogSystem> ();
 		DialogLoader.Load (dialogFile, this);
 		
-		dialogSystem.startDialogWith (this);
+		//dialogSystem.startDialogWith (this);
 	}
 
 

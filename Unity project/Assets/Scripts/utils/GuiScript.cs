@@ -24,11 +24,17 @@ public class GuiScript : MonoBehaviour {
 		GUI.Box(r,text,style);
 	}
 	
+	protected void drawTextLeftJustified(Vector2 p, string text, GUIStyle style, Vector2 dimension){
+		Vector2 textSize = style.CalcSize(new GUIContent(text));
+		style.wordWrap = true;
+		Rect r = new Rect (p.x, p.y, dimension.x, dimension.y);
+		GUI.Box(r,text,style);
+	}
+	
 	protected void drawTextRightJustified(Vector2 p, string text, GUIStyle style){
 		Vector2 textSize = style.CalcSize(new GUIContent(text));
 		float x = p.x-textSize.x;
 		Rect r = new Rect (x, p.y, textSize.x, textSize.y);
-		//Debug.Log (r);
 		GUI.Box(r,text,style);
 	}
 

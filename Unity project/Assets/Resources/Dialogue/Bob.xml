@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <dialog name="bob">
-	<brush-off text="Go away!" />
+	<brush-off text="Go away! I hate Bob and Will. Will you mary me? What is a Paladin? Montre moi la mangique" />
 
 	<opener tag="" id="0">
 		<response text="Bonsoir" />
@@ -10,7 +10,7 @@
 	<opener tag="" id="1">
 		<question text="What is your favorite banana?">
 			<answer text="plantin">
-				<response text="Are you crazy?" />
+				<response text="Oh really? DIE!!" />
 			</answer>
 			<answer text="cavendich">
 				<response text="Oh really? DIE!!" />

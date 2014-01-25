@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<dialog name="bob">
+	<brush-off text="Go away!" />
+
+	<opener tag="" id="0">
+		<response text="Bonsoir" />
+	</opener>
+	
+	<opener tag="" id="1">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<response text="Are you crazy?" />
+			</answer>
+			<answer text="cavendich">
+				<response text="Oh really? DIE!!" />
+			</answer>
+			<answer text="small ones">
+				<question text="Is that how you like your woman?">
+					<answer text="Yes" >
+						<script function="changeFurnitureModels" param="randomToy" />
+					</answer>
+					<answer text="No" >
+						<activate tag="Crazy" />
+					</answer>
+				</question>
+			</answer>
+		</question>
+		
+	</opener>
+	
+	
+	<opener tag="Crazy" id="2">
+		<response text="YYEEAAAA" />
+	</opener>
+</dialog>

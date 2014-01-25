@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<opener text="I'm bored!" activation="" id="0" />
+<opener text="Are you sad?" activation="" id="1" />
+<opener text="I want  you to leave!" activation="" id="2" />
+<opener text="Ask me an intelligent question!" activation="" id="3" />
+<opener text="Do you like pirates?" activation="" id="4" />
+
+
+<dialog>
+	<Brush-off text="Not right now, Sweetie." />
+
+	<opener id="0">
+		<question text="Oh - well, the other kids are upstairs. Why don't you go up and play?" >
+			<answer text="There's not enough kids!">
+				<activate tag="adults2kids" />
+			</answer>
+			<answer text="Kids don't know anything!">
+				<activate tag="anonymous" />
+			</answer>
+			<answer text="I want to play here!">
+				<activate tag="toys" />
+			</answer>
+		</question>
+	</opener>
+					
+	<opener id="1">
+		<response text="Sweetie... Yes, I ... I told you why, but... nevermind. You'll understand when you're older." />
+	</opener>
+					
+	<opener id="2">
+		<response text="Don't be ridiculous!" />
+	</opener>
+	
+	
+	<opener id="7">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<activate tag="plantin" />
+			</answer>
+			<answer text="cavendich">
+				<response text="cavendich" />
+			</answer>
+			<answer text="small ones">
+				<response text="smallBananas" />
+			</answer>
+		</question>
+		
+	</opener>
+		
+		
+</dialog>

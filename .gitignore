@@ -1,14 +1,14 @@
 #Mostly meta files...
-monkeyBarf/Library/
-monkeyBarf/Assembly-CSharp-Editor-vs.csproj
-monkeyBarf/Assembly-CSharp-Editor.csproj
-monkeyBarf/Assembly-CSharp-Editor.pidb
-monkeyBarf/Assembly-CSharp-firstpass-vs.csproj
-monkeyBarf/Assembly-CSharp-firstpass.csproj
-monkeyBarf/Assembly-CSharp-firstpass.pidb
-monkeyBarf/Assembly-CSharp-vs.csproj
-monkeyBarf/Assembly-CSharp.csproj
-monkeyBarf/Assembly-CSharp.pidb
-monkeyBarf/Assembly-UnityScript-firstpass-vs.unityproj
-monkeyBarf/Assembly-UnityScript-firstpass.unityproj
-monkeyBarf/Assembly-UnityScript-firstpass.pidb
+Unity project/Library/
+Unity project/Assembly-CSharp-Editor-vs.csproj
+Unity project/Assembly-CSharp-Editor.csproj
+Unity project/Assembly-CSharp-Editor.pidb
+Unity project/Assembly-CSharp-firstpass-vs.csproj
+Unity project/Assembly-CSharp-firstpass.csproj
+Unity project/Assembly-CSharp-firstpass.pidb
+Unity project/Assembly-CSharp-vs.csproj
+Unity project/Assembly-CSharp.csproj
+Unity project/Assembly-CSharp.pidb
+Unity project/Assembly-UnityScript-firstpass-vs.unityproj
+Unity project/Assembly-UnityScript-firstpass.unityproj
+Unity project/Assembly-UnityScript-firstpass.pidb

@@ -7,7 +7,7 @@ public class onClickDialog : MonoBehaviour {
 
 
 	void Start () {
-		characterDialog = (CharacterDialog)this.transform.parent.GetComponent<CharacterDialog> ();
+		characterDialog = (CharacterDialog)this.transform.parent.parent.GetComponent<CharacterDialog> ();
 	}
 
 

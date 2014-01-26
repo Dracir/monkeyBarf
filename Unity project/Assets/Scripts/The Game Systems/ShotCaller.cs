@@ -10,11 +10,15 @@ public class ShotCaller : MonoBehaviour {
 	void Start () {
 		adultGroupControler = (AdultGroupControler)this.gameObject.GetComponent<AdultGroupControler> ();
 		playerControler = (PlayerControler)GameObject.FindGameObjectWithTag ("ThePlayer").GetComponent<PlayerControler> ();
+
 	}
 
-
+	bool once = false;
 	void Update () {
-	
+		if (!once) {
+			//execute ("attachTo", "", "bob");
+			once = true;
+		}
 	}
 
 
@@ -58,7 +62,7 @@ public class ShotCaller : MonoBehaviour {
 		}else if (functionName.Equals ("color")) {
 			Renderer[] renderers = FindObjectsOfType(typeof(Renderer)) as Renderer[];
 			foreach (Renderer item in renderers) {
-				Color color = null;
+				Color color = Color.white;
 				if(param.Equals("chartreuse")){
 					color = new Color(147f/255f, 200f/255f, 49f/255f, 1f);
 				}

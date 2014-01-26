@@ -6,12 +6,17 @@ public class AdultControler : MonoBehaviour {
 	private CharacterDialog dialog;
 	private GameObject overHeadNameGameObject;
 	private TextMesh overHeadName;
+	private NavMeshAgent agent;
+
+	public float nextMovingTime = 0;
+	public StandingSpot spot;
 
 	// Use this for initialization
 	void Awake () {
 		dialog = this.GetComponent<CharacterDialog> ();
 		overHeadNameGameObject = this.gameObject.transform.FindChild ("CharacterName").gameObject;
 		overHeadName = (TextMesh) overHeadNameGameObject.GetComponent<TextMesh>();
+		agent = (NavMeshAgent)this.GetComponent<NavMeshAgent> ();
 	}
 	
 	// Update is called once per frame
@@ -34,6 +39,11 @@ public class AdultControler : MonoBehaviour {
 
 	public void hideName(){
 		overHeadNameGameObject.SetActive (false);
+	}
+
+	public void goTo(StandingSpot targetSpot){
+		this.spot = targetSpot;
+		this.agent.SetDestination (targetSpot.transform.position);
 	}
 
 }

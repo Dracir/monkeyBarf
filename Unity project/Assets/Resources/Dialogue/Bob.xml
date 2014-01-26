@@ -7,13 +7,7 @@
 		<multiple text="yoyoyo">
 			<activate tag="Crazy" />
 			<activate tag="Botato" />
-			<script function="removeNames" param=""/>
-			<script function="SetJumpHeight" param="8"/>
-			<script function="rotate" param="8"/>
-			<script function="scaleObject" tag="adult" param="0.5"/>
-			<script function="rotateZ" tag="adult" param="60"/>
 			<script function="attachTo" param="bob"/>
-			
 		</multiple>
 		
 	</opener>

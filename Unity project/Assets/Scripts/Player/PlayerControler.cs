@@ -25,8 +25,13 @@ public class PlayerControler : MonoBehaviour {
 
 
 	void Update () {
+
+	}
+
+	void FixedUpdate(){
 		if (attachedTo != null) {
-					
+			this.attachedTo.transform.position = this.fpsGameObject.transform.position;
+			this.attachedTo.transform.localRotation = this.fpsGameObject.transform.localRotation;
 		}
 	}
 
@@ -49,6 +54,10 @@ public class PlayerControler : MonoBehaviour {
 
 	
 	public void attachTo(AdultControler adultControler){
+		if (this.attachedTo != null) return;
+
 		this.attachedTo = adultControler.gameObject;
+		camera.transform.Translate (0,4,1);
+		this.transform.position = this.attachedTo.transform.position;
 	}
 }

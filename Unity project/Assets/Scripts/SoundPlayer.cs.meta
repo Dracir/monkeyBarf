@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 82a80713a63a4d64a936959da4839a02
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - beethoven: {fileID: 8300000, guid: 7192e3d022c1ac24bb9cd53de2d576f3, type: 3}
+  - awfulSound: {fileID: 8300000, guid: 5edfe1c10d859874e8c11702277b9364, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

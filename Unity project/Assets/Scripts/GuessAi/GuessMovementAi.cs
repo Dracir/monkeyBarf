@@ -41,6 +41,7 @@ public class GuessMovementAi : MonoBehaviour {
 
 	void Update () {
 		foreach (AdultControler adult in adultControlers) {
+			if(!adult.aiEnabled) continue;
 			if(adult.arrivedToSpot){
 				adult.nextMovingTime -= Time.deltaTime;
 			}

@@ -55,9 +55,11 @@ public class PlayerControler : MonoBehaviour {
 	
 	public void attachTo(AdultControler adultControler){
 		if (this.attachedTo != null) return;
+		adultControler.disableAi ();
 
 		this.attachedTo = adultControler.gameObject;
-		camera.transform.Translate (0,4,1);
+		camera.transform.Translate (0,6,6);
 		this.transform.position = this.attachedTo.transform.position;
+		this.transform.Translate (0,5,0);
 	}
 }

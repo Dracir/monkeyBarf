@@ -10,6 +10,7 @@ public class AdultControler : MonoBehaviour {
 
 	public float nextMovingTime = 0;
 	public StandingSpot spot;
+	public bool aiEnabled = true;
 	public bool arrivedToSpot = false;
 
 
@@ -22,7 +23,7 @@ public class AdultControler : MonoBehaviour {
 
 
 	void Update () {
-		if (spot != null) {
+		if (spot != null && aiEnabled) {
 			if(!arrivedToSpot){
 				if(distanceToSpot() < 1){
 					arrivedToSpot = true;
@@ -39,6 +40,12 @@ public class AdultControler : MonoBehaviour {
 
 			}	
 		}
+	}
+
+	public void disableAi(){
+		this.agent.enabled = false;
+		this.aiEnabled = false;
+		this.spot.adultInTheSpot = null;
 	}
 
 	public void activateTag(string tag){

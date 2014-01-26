@@ -12,10 +12,10 @@ public class DialogLoader {
 		
 		while(reader.Read()){
 			if(reader.Name.Equals("brush-off")){
-				characterDialog.brushOff = reader.GetAttribute("text");
+				characterDialog.brushOff = getReaderAttribute("text");
 			}else if(reader.Name.Equals("opener")){
 				characterDialog.openners.Add (readOpenner());
-			}if(reader.Name.Equals("dialog") && reader.GetAttribute("name") != null){
+			}else if(reader.Name.Equals("dialog") && reader.GetAttribute("name") != null){
 				characterDialog.characterName = reader.GetAttribute("name");
 			}
 		}
@@ -25,11 +25,12 @@ public class DialogLoader {
 		Openner openner = new Openner();
 		openner.tag = reader.GetAttribute("tag");
 		openner.text = reader.GetAttribute("id");
+		openner.active = openner.tag.Equals ("");
 
 		while (reader.Read()) {
 			if(reader.Name.Equals("opener")){
 				break;
-			} else {
+			} else if(openner.nextDialog == null){
 				openner.nextDialog = readDialog();
 			}
 		}
@@ -54,6 +55,8 @@ public class DialogLoader {
 			return readScript ();
 		} else if (reader.Name.Equals ("question")) {
 			return readQuestion ();
+		} else if (reader.Name.Equals ("multiple")) {
+			return readMultiple ();
 		} else {
 			return null;		
 		}
@@ -61,8 +64,20 @@ public class DialogLoader {
 
 	}
 
+	private Dialog readMultiple(){
+		Multiple multiple = new Multiple(getReaderAttribute("text"));
+		while (reader.Read()) {
+			if(reader.Name.Equals("multiple")){
+				break;
+			} else {
+				multiple.dialogs.Add(readDialog());
+			}
+		}
+		return multiple;
+	}
+
 	private Dialog readQuestion(){
-		Question question = new Question(reader.GetAttribute("text"));
+		Question question = new Question(getReaderAttribute("text"));
 		while (reader.Read()) {
 			if(reader.Name.Equals("question")){
 				break;
@@ -81,15 +96,14 @@ public class DialogLoader {
 	}
 
 	public Answer readAnswer(){
+		Answer answer = new Answer(getReaderAttribute("text"));
 		reader.Read ();
-		Answer answer = new Answer(reader.GetAttribute("text"));
-		Dialog nextDialog = readNextDialog ();
-		answer.nextDialog = nextDialog;
+		answer.nextDialog = readNextDialog ();
 		return answer;
 	}
 
 	public SimpleResponse readResponse(){
-		SimpleResponse reponse = new SimpleResponse(reader.GetAttribute("text"));
+		SimpleResponse reponse = new SimpleResponse(getReaderAttribute("text"));
 		reader.Read ();
 		return reponse;
 	}
@@ -104,6 +118,14 @@ public class DialogLoader {
 		ScriptCall scriptCall = new ScriptCall(reader.GetAttribute("function"),reader.GetAttribute("param"));
 		reader.Read ();
 		return scriptCall;
+	}
+
+	public string getReaderAttribute(string attribut){
+		string text = reader.GetAttribute (attribut);
+		if (text != null) {
+			return text.Replace("\\n","\n");
+		}
+		return null;
 	}
 	
 	public static void Load(TextAsset dialogFile,CharacterDialog characterDialog){

@@ -12,6 +12,9 @@ public class GuiScript : MonoBehaviour {
 		return style;
 	}
 
+	protected Vector2 getTextSize(GUIStyle style, string text){
+		return  style.CalcSize(new GUIContent(text));
+	}
 	protected void drawTextCentered(Vector2 p, string text, GUIStyle style){
 		Vector2 textSize = style.CalcSize(new GUIContent(text));
 		Rect r = new Rect (p.x - textSize.x/2, p.y - textSize.y/2, textSize.x, textSize.y);
@@ -25,7 +28,6 @@ public class GuiScript : MonoBehaviour {
 	}
 	
 	protected void drawTextLeftJustified(Vector2 p, string text, GUIStyle style, Vector2 dimension){
-		Vector2 textSize = style.CalcSize(new GUIContent(text));
 		style.wordWrap = true;
 		Rect r = new Rect (p.x, p.y, dimension.x, dimension.y);
 		GUI.Box(r,text,style);

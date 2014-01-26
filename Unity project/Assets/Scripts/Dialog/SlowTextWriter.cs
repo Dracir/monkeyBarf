@@ -14,10 +14,9 @@ public class SlowTextWriter {
 	}
 
 	public string getText(){
+		currentLenght += speed * Time.deltaTime;	
 		if (currentLenght >= fullText.Length) {
 			currentLenght = fullText.Length;
-		} else {
-			currentLenght += speed * Time.deltaTime;				
 		}
 
 		return fullText.Substring (0, (int)currentLenght);

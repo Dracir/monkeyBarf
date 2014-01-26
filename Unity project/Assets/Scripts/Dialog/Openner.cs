@@ -6,5 +6,5 @@ public class Openner : Dialog{
 
 	public string text;
 	public string tag;
-
+	public bool active;
 }

@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <dialog name="bob">
-	<brush-off text="Go away! I hate Bob and Will. Will you mary me? What is a Paladin? Montre moi la mangique" />
+	<brush-off text="Go away!\nI ate Will.\nWhats is a paladin?\nRgh\nPotoato" />
 
-	<opener tag="" id="0">
-		<response text="Bonsoir" />
+	<opener tag="" id="Je suis une erreur">
+		<multiple text="yoyoyo">
+			<activate tag="Crazy" />
+			<activate tag="Botato" />
+		</multiple>
+		
 	</opener>
 	
-	<opener tag="" id="1">
+	<opener tag="Crazy" id="SimpleQuestion">
+		<question text="What is your favorite banana?">
+			<answer text="plantin">
+				<script function="debugFloat" param="2.4" />
+			</answer>
+			<answer text="cavendich">
+				<response text="Oh really? DIE!!" />
+			</answer>
+		</question>
+	</opener>
+	
+	<opener tag="Botato" id="If god wills!">
 		<question text="What is your favorite banana?">
 			<answer text="plantin">
 				<response text="Oh really? DIE!!" />
@@ -29,8 +44,11 @@
 		
 	</opener>
 	
+	<opener tag="Botato2" id="Bonsoir">
+		<response text="2334241" />
+	</opener>
 	
-	<opener tag="Crazy" id="2">
+	<opener tag="Crazy3" id="2">
 		<response text="YYEEAAAA" />
 	</opener>
 </dialog>

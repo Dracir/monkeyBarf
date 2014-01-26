@@ -10,7 +10,7 @@
 				<script function="changeAdultModels" param="childModel"/>
 			</answer>
 			<answer text="Kids don't know anything!">
-				<script function="removeNames" />
+				<script function="removeNames" param=""/>
 			</answer>
 			<answer text="I want to play here!">
 				<script function="changeFurnitureModels" param="randomToy" />

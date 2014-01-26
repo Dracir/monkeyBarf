@@ -16,7 +16,8 @@ public class DialogLoader {
 			}else if(reader.Name.Equals("opener")){
 				characterDialog.openners.Add (readOpenner());
 			}else if(reader.Name.Equals("dialog") && reader.GetAttribute("name") != null){
-				characterDialog.characterName = reader.GetAttribute("name");
+				AdultControler adultControler = (AdultControler)characterDialog.GetComponent<AdultControler>();
+				adultControler.setName(reader.GetAttribute("name"));
 			}
 		}
 	}

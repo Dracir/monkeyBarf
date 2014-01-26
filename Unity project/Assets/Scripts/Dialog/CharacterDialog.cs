@@ -21,7 +21,7 @@ public class CharacterDialog : MonoBehaviour {
 			//printDialogTree();
 		}
 		
-		dialogSystem.startDialogWith (this);
+		//dialogSystem.startDialogWith (this);
 	}
 
 	private void printDialogTree(){
@@ -52,7 +52,7 @@ public class CharacterDialog : MonoBehaviour {
 	}
 
 
-	void OnMouseDown()  { 
+	public void startDialog()  { 
 		dialogSystem.startDialogWith (this);
 	}
 

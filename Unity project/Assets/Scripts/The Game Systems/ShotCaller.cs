@@ -3,20 +3,25 @@ using System.Collections;
 
 public class ShotCaller : MonoBehaviour {
 
-	// Use this for initialization
+	private AdultGroupControler adultGroupControler;
+
+
 	void Start () {
-	
+		adultGroupControler = (AdultGroupControler)this.gameObject.GetComponent<AdultGroupControler> ();
 	}
-	
-	// Update is called once per frame
+
+
 	void Update () {
 	
 	}
+
 
 	public void execute(string functionName, string param){
 		if (functionName.Equals ("debugFloat")) {
 			float number = float.Parse(param);
 			debugFloat(number);
+		}else if (functionName.Equals ("removeNames")) {
+			adultGroupControler.removeAllNames();
 		}
 	}
 

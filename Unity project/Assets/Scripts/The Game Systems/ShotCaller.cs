@@ -6,7 +6,7 @@ public class ShotCaller : MonoBehaviour {
 	private AdultGroupControler adultGroupControler;
 	private PlayerControler playerControler;
 
-
+	private GameObject[] adults;
 	void Start () {
 		adultGroupControler = (AdultGroupControler)this.gameObject.GetComponent<AdultGroupControler> ();
 		playerControler = (PlayerControler)GameObject.FindGameObjectWithTag ("ThePlayer").GetComponent<PlayerControler> ();
@@ -16,6 +16,8 @@ public class ShotCaller : MonoBehaviour {
 			item.playbackTime = Random.Range(0, 6f);
 			//item.Play();
 		}
+	adults = GameObject.FindGameObjectsWithTag("Adult");
+		
 	}
 
 
@@ -183,6 +185,8 @@ public class ShotCaller : MonoBehaviour {
 			foreach (CloneOrDestroy item in cloners) {
 				item.SendMessage("Clone");
 			}
+		}else if (functionName.Equals("addToAdultModels")){
+			Debug.Log ("yeah'");
 		}
 	}
 

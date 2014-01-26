@@ -14,7 +14,7 @@ public class DialogSystem : GuiScript {
 	
 	private GUIStyle textStyle;
 	
-	private CharacterDialog character;
+	public CharacterDialog character;
 	public SlowTextWriter textWriter;
 
 

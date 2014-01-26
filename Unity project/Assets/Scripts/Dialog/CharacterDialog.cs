@@ -10,8 +10,10 @@ public class CharacterDialog : MonoBehaviour {
 	public string characterName;
 	public List<Openner> openners;
 
-	private DialogSystem dialogSystem;
-
+	public DialogSystem dialogSystem;
+	
+	
+	
 	void Start () {
 		dialogSystem = GameObject.FindGameObjectWithTag ("TheGame").GetComponent<DialogSystem> ();
 		if (dialogFile == null) {

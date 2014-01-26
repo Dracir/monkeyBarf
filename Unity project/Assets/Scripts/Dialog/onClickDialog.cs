@@ -12,7 +12,7 @@ public class onClickDialog : MonoBehaviour {
 
 	void Update (){
 		
-		if (Input.GetMouseButtonDown(0)){
+		if (Input.GetMouseButtonDown(0) && !characterDialog.dialogSystem.character){
 			Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 			RaycastHit hitInfo;
 			bool hit = Physics.Raycast (ray, out hitInfo, checkDistance);

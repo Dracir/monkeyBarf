@@ -17,7 +17,10 @@
 				<script function="particlesFromSky" param="snow" />
 			</answer>
 			<answer text="You're a baby!">
-				<script function="changeAdultMaterials" param="babies" />
+				<multiple>
+					<script function="addToAdultModels" tag="adult" param="diaper" />
+					<script function="changeColour" param="pink" />
+				</multiple>
 			</answer>
 		</question>
 	</opener>
@@ -28,11 +31,10 @@
 				<script function="disappear" />
 			</answer>
 			<answer text="I'm sorry!" >
-				<activate tag="love" />
 				<response text="Oh, honey... it's a very emotional time. I love you, okay? Please don't say that sort of thing.">
 			</answer>
 			<answer text="You are evil!" >
-				<script function="evilPeople" />
+				<script function="addToAdultModels" param="devils" />
 			</answer>
 		</question>
 	</opener>
@@ -45,10 +47,10 @@
 	<opener id="4">
 		<question text="God grants you your greatest desire in heaven. What will you ask for?" >
 			<answer text="The most annoying sound ever!">
-				<script function="annoyingSound" />
+				<script function="playSound" param="annoying" />
 			</answer>
 			<answer text="A bigger house!">
-				<script function="biggerHouse" />
+				<script function="scaleObject" tag="house" param="1.5" />
 			</answer>
 			<answer text="Angels!">
 				<script function="addToAdultModels" param="angels"/>

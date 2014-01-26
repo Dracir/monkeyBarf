@@ -7,13 +7,13 @@
 	<opener id="0">
 		<question text="Oh - well, the other kids are upstairs. Why don't you go up and play?" >
 			<answer text="There's not enough kids!">
-				<script function="changeAdultModels" param="childModel"/>
+				<script function="scaleObject" tag="adult" param="0.5"/>
 			</answer>
 			<answer text="Kids don't know anything!">
 				<script function="removeNames" />
 			</answer>
 			<answer text="I want to play here!">
-				<script function="changeFurnitureModels" param="randomToy" />
+				<script function="changeModels" tag="furniture" param="toys" />
 			</answer>
 		</question>
 	</opener>
@@ -28,14 +28,14 @@
 	
 	<opener id="3">
 		<question text="Oh! All right then. Let's see.... What's your favourite optical phenomenon?">
-			<answer text="Reflection!">
-				<script function="changeShaders" param="specular"/>
+			<answer text="Bubbles!">
+				<script function="particlesFromSky" param="bubble"/>
 			</answer>
 			<answer text="Laser eyes!">
 				<script function="addToAdultModels" param="laserEyes"/>
 			</answer>
 			<answer text="Illusions!">
-				<script function="changeTextures" param="illusion"/>
+				<script function="changeTextures" tag="wall" param="illusion"/>
 			</answer>
 		</question>
 		

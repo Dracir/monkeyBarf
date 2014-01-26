@@ -39,13 +39,13 @@
 	<opener id="3">
 		<question text="Haha what? Okay. What was the leading cause of death in the 19th century?">
 			<answer text="Pirates!">
-				<script function="changeLegModels" param="pegLeg" />
+				<script function="changeModels" tag="leg" param="pegLeg" />
 			</answer>
 			<answer text="War!">
-				<script function="war"/>
+				<script function="changeModels" tag="drink" param="spear"/>
 			</answer>
 			<answer text="Drowning!">
-				<script function="underwater"/>
+				<script function="changeTextures" tag="wall" param="water"/>
 			</answer>
 		</question>
 		
@@ -53,14 +53,14 @@
 	
 	<opener id="4">
 		<question text="Good question! I don't know, buddy. What do you think happens?" >
-			<answer text="Reincarnated as squirrels!">
-				<script function="squirrels"/>
+			<answer text="Reincarnated as birds!">
+				<script function="spawn" param="bird"/>
 			</answer>
 			<answer text="Reincarnated as kitties!">
-				<script function="cats"/>
+				<script function="spawn" param="cats"/>
 			</answer>
 			<answer text="Reincarnated as fish!">
-				<script function="fish"/>
+				<script function="spawn" param="fish"/>
 			</answer>
 		</question>
 	</opener>

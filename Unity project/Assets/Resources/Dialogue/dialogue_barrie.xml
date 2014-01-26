@@ -15,7 +15,7 @@
 			<answer text="Toys!">
 				<script function="spawn" param="toys" />
 			</answer>
-		</question>	
+		</question>
 	</opener>
 	
 	<opener id="1">
@@ -26,11 +26,22 @@
 		<question text="Why?" >
 			<answer text="You're boring!">
 				<question text="What would you rather I be?">
+					<answer text="A bird!">
+						<script function="changeModels" tag="arm" param="bird" />
+					</answer>
+					<answer text="A pirate!">
+						<script function="changeModels" tag="leg" param="pegLeg" />
+					</answer>
+					<answer text="An arcade machine!">
+						<script function="changeModels" tag="torso" param="arcade" />
+					</answer>
 				</question>
 			</answer>
 			<answer text="Okay, both of you leave!">
-				<script function="disappear" param="Casey"/>
-				<script function="disappear" param="Stieg"/>
+				<multiple>
+					<script function="disappear" param="Casey"/>
+					<script function="disappear" param="Stieg"/>
+				</multiple>
 			</answer>
 			<answer text="No, you stay! And turn around!">
 				<script function="flipAdultModels" param="yAxis" />
@@ -42,13 +53,13 @@
 	<opener id="3">
 		<question text="Hmm.... What's the worst condition to live with?">
 			<answer text="Parkinson's!">
-				<script function="noClip"/>
+				<script function="vibrate" tag="arms"/>
 			</answer>
-			<answer text="Dyslexia!">
-				<script function="snakeLimbs"/>
+			<answer text="Dysentery!">
+				<script function="spawn" tag="poop"/>
 			</answer>
 			<answer text="Epilepsy!">
-				<script function="beethoven"/>
+				<script function="flickerLights"/>
 			</answer>
 		</question>
 		

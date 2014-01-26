@@ -25,11 +25,13 @@ public class DialogSystem : GuiScript {
 
 	private ShotCaller shotCaller;
 	private PlayerControler playerControler;
+	private AdultGroupControler adultGroupControler;
 
 	void Start () {
 		questionMouseRegion = new List<MouseRegion> ();
 		textStyle = generateFont (18, font, Color.black);
 		shotCaller = (ShotCaller) GameObject.FindGameObjectWithTag ("TheGame").GetComponent<ShotCaller> ();
+		adultGroupControler = (AdultGroupControler) GameObject.FindGameObjectWithTag ("TheGame").GetComponent<AdultGroupControler> ();
 		playerControler = (PlayerControler) GameObject.FindGameObjectWithTag ("ThePlayer").GetComponent<PlayerControler> ();
 	}
 	
@@ -105,7 +107,7 @@ public class DialogSystem : GuiScript {
 		foreach(Dialog d in multiple.dialogs){
 			if(d is Activation){
 				Activation a = (Activation) d;
-				character.activate (a.tag);
+				adultGroupControler.activateTag (a.tag);
 			} else if(d is ScriptCall){
 				ScriptCall s = (ScriptCall) d;
 				shotCaller.execute (s.script, s.tag, s.param);
@@ -125,7 +127,7 @@ public class DialogSystem : GuiScript {
 	}
 
 	private void doActivation(Activation activation){
-		character.activate (activation.tag);
+		adultGroupControler.activateTag (activation.tag);
 		switchTo(activation.nextDialog);
 	}
 
@@ -133,11 +135,12 @@ public class DialogSystem : GuiScript {
 		string text = "";
 		Vector2 offset = getBoxTopLeftLocation ();
 		int xOffset = (int) (offset.x + textOffset.x);
-		int yOffset = (int) (offset.y + textOffset.y + 30);
 		int lineHeigh = (int)( getTextSize(textStyle, "T").y );
+		int yOffset = (int) (offset.y + textOffset.y + 30 + lineHeigh);
 		int answerIndex = 0;
 		
 		questionMouseRegion.Clear();
+		text += question.questionText + "\n";
 		foreach(Answer answer in question.answers){
 			int lineWidth = (int)( getTextSize(textStyle, answer.text).x );
 			MouseRegion mr = new MouseRegion(new Rect(xOffset, yOffset  + lineHeigh * answerIndex,lineWidth,lineHeigh),answer.nextDialog);
@@ -197,7 +200,7 @@ public class DialogSystem : GuiScript {
 			if(selectedAnswerIndex != -1){
 				Rect zone = questionMouseRegion[selectedAnswerIndex].zone;
 				int answerY = (int) (yOffset +textOffset.y + 30 + zone.height * selectedAnswerIndex);
-				GUI.DrawTexture (new Rect(xOffset+textOffset.x, answerY, zone.width,zone.height),choiceUnderlay);
+				GUI.DrawTexture (new Rect(zone.xMin, zone.yMin, zone.width,zone.height),choiceUnderlay);
 			}
 			drawTextLeftJustified (new Vector2 (xOffset+textOffset.x,yOffset+textOffset.y + 30), this.textWriter.getText(), textStyle, new Vector2(boxWidth,boxHeight) );		
 		}

@@ -32,6 +32,12 @@ public class AdultGroupControler : MonoBehaviour {
 		}
 	}
 
+	public void activateTag(string tag){
+		foreach (AdultControler adult in adultControlers) {
+			adult.activateTag(tag);
+		}
+	}
+
 	public AdultControler getAdultWithName(string name){
 		foreach (AdultControler adult in adultControlers) {
 			if(adult.getName().Equals(name)){

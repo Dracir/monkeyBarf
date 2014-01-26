@@ -7,7 +7,6 @@
 		<multiple text="yoyoyo">
 			<activate tag="Crazy" />
 			<activate tag="Botato" />
-			<script function="attachTo" param="bob"/>
 		</multiple>
 		
 	</opener>

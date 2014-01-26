@@ -12,6 +12,10 @@ public class onClickDialog : MonoBehaviour {
 
 
 	void OnMouseDown()  { 
-		characterDialog.startDialog ();
+		Vector3 v = this.transform.position - this.characterDialog.transform.position;
+		if (v.magnitude < 5) {
+			characterDialog.startDialog ();		
+		}
 	}
+
 }

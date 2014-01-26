@@ -154,7 +154,13 @@ public class DialogSystem : GuiScript {
 	
 	public void startDialogWith(CharacterDialog character){
 		this.character = character;
-		playerControler.fix (character.transform);
+		Transform[] tgroup = character.transform.GetComponentsInChildren<Transform> ();
+		foreach (Transform t in tgroup) {
+			if(t.name.Equals("Control_Head")){
+				playerControler.fix (t);
+			}
+
+		}
 		
 		if (!character.hasActiveOpenner()) {
 			string text = "";

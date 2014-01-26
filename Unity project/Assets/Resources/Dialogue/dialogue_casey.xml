@@ -33,18 +33,18 @@
 			<answer text="Time powers!">
 				<question text="Really! What kind of time powers?">
 					<answer text="Slow people down!">
-						<script function="setAnimationTimeScale" param="0.5f" />
+						<script function="setAnimationTimeScale" param="0.5" />
 					</answer>
 					<answer text="Speed people up!">
-						<script function="setAnimationTimeScale" param="2f" />
+						<script function="setAnimationTimeScale" param="2" />
 					</answer>
 					<answer text="Stop people dead!">
 						<script function="setAnimationTimeScale" param="0" />
 					</answer>
 				</question>
 			</answer>
-			<answer text="Flight!">
-				<script function="snakeLimbs"/>
+			<answer text="High jumping!">
+				<script function="highJump"/>
 			</answer>
 			<answer text="Super strength!">
 				<script function="superStrength"/>
@@ -56,13 +56,13 @@
 	<opener id="4">
 		<question text="Who cares? It's what happens before death that counts. What do you want to be when you grow up?" >
 			<answer text="A fish!">
-				<script function="changeHeadModels" param="fish" />
+				<script function="changeModels" tag="head" param="fish" />
 			</answer>
 			<answer text="A game developer!">
-				<script function="changeTorsoModels" param="arcade" />
+				<script function="changeModels" tag="torso" param="arcade" />
 			</answer>
 			<answer text="Interior designer!">
-				<script function="spawn" param="circleFurniture" />
+				<script function="spawn" param="furniture" />
 			</answer>
 		</question>
 	</opener>

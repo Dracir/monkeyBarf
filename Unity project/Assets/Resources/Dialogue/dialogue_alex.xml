@@ -22,13 +22,13 @@
 	<opener id="1">
 		<question text="No, I don't see the need to be sad for this sort of thing. I like to remember good things. What do you like to think about to make yourself happy?" >
 			<answer text="Pandemonium!" >
-				<script function="changeAdultModels" param="randomModel" />
+				<script function="changeModels" tag="torso" param="randomModel" />
 			</answer>
-			<answer text="Flowers!">
-				<script function="addToAllModels" param="flowers" />
+			<answer text="Ball rooms!">
+				<script function="spawn" param="balls" />
 			</answer>
 			<answer text="Woodland creatures!">
-				<script function="changeArmModels" param="squirrel" />
+				<script function="changeModels" tag="arm" param="bird" />
 			</answer>
 		</question>
 	</opener>
@@ -40,14 +40,14 @@
 	
 	<opener id="3">
 		<question text="If you could have something instead of a head, what would it be?">
-			<answer text="A skull!">
-				<script function="changeHeadModels" param="skull"/>
+			<answer text="A cat!">
+				<script function="changeModels" tag="head" param="catHead"/>
 			</answer>
 			<answer text="A helmet!">
-				<script function="changeHeadModels" param="helmet"/>
+				<script function="changeModels" tag="head" param="helmet"/>
 			</answer>
-			<answer text="A watermelon!">
-				<script function="changeHeadModels" param="watermelon"/>
+			<answer text="A top hat!">
+				<script function="changeModels" tag="head" param="topHat"/>
 			</answer>
 		</question>
 		

@@ -5,6 +5,7 @@ MonoImporter:
   defaultReferences:
   - beethoven: {fileID: 8300000, guid: 7192e3d022c1ac24bb9cd53de2d576f3, type: 3}
   - awfulSound: {fileID: 8300000, guid: 5edfe1c10d859874e8c11702277b9364, type: 3}
+  - partySound: {fileID: 8300000, guid: b0516fd739c1a2a45a4879f122a59423, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

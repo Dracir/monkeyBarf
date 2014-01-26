@@ -2,9 +2,9 @@
 
 
 <dialog name="Alex">
-	<Brush-off text="The rules say I'm not supposed to talk to you right now." />
+	<brush-off text="The rules say I'm not supposed to talk to you right now." />
 
-	<opener id="0">
+	<opener tag="" id="I'm bored!">
 		<question text="Really? But death is so fascinating. Aren't you curious to know what happens when we die?" >
 			
 			<answer text="Yes!">
@@ -19,7 +19,7 @@
 		</question>
 	</opener>
 					
-	<opener id="1">
+	<opener tag="" id="Are you sad?">
 		<question text="No, I don't see the need to be sad for this sort of thing. I like to remember good things. What do you like to think about to make yourself happy?" >
 			<answer text="Pandemonium!" >
 				<script function="changeModels" tag="torso" param="randomModel" />
@@ -33,12 +33,22 @@
 		</question>
 	</opener>
 					
-	<opener id="2">
-		<response text="You don't want me to leave. I'm awesome." />
+	<opener tag="" id="I want you to leave!">
+		<question text="You don't want me to leave. I'm awesome. And super smart." >
+			<answer text="No, I'm smart!">
+				<activate tag="intelligent" />
+			</answer>
+			<answer text="Don't you mean 'intelligent'?">
+				<activate tag="intelligent" />
+			</answer>
+			<answer text="I'm smarter than you!">
+				<activate tag="intelligent" />
+			</answer>
+		</question>
 		
 	</opener>
 	
-	<opener id="3">
+	<opener tag="intelligent" id="Ask me an intelligent question!">
 		<question text="If you could have something instead of a head, what would it be?">
 			<answer text="A cat!">
 				<script function="changeModels" tag="head" param="catHead"/>
@@ -53,27 +63,11 @@
 		
 	</opener>
 	
-	<opener id="4">
+	<opener tag="death" id="What happens when you die?">
 		<response text="Eventual decomposition of the tissues and evaporation of the blood, feeding certain organisms that live in the ground. Unless you're cremated, which is just a waste.'" >
 	</opener>
 	
 	
 	
-	
-	<opener id="7">
-		<question text="What is your favorite banana?">
-			<answer text="plantin">
-				<script function="plantin" />
-			</answer>
-			<answer text="cavendich">
-				<response text="cavendich" />
-			</answer>
-			<answer text="small ones">
-				<response text="smallBananas" />
-			</answer>
-		</question>
-		
-	</opener>
-		
 		
 </dialog>

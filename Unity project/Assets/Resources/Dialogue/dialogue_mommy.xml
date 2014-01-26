@@ -2,9 +2,9 @@
 
 
 <dialog name="Mommy">
-	<Brush-off text="Not right now, Sweetie." />
+	<brush-off text="Not right now, Sweetie." />
 
-	<opener id="0">
+	<opener tag="" id="I'm bored!">
 		<question text="Oh - well, the other kids are upstairs. Why don't you go up and play?" >
 			<answer text="There's not enough kids!">
 				<script function="scaleObject" tag="adult" param="0.5"/>
@@ -18,15 +18,22 @@
 		</question>
 	</opener>
 					
-	<opener id="1">
-		<response text="Sweetie... Yes, I ... I told you why, but... nevermind. You'll understand when you're older." />
+	<opener tag="" id="Are you sad?">
+		<question text="Sweetie... Yes, I ... I told you why, but... nevermind. You'll understand when you're older." >
+			<answer text="I understand! I'm smart!">
+				<activate tag="intelligent" />
+			</answer>
+			<answer text="I don't want to wait!">
+				<activate tag="death" />
+			</answer>
+		</question>
 	</opener>
 					
-	<opener id="2">
+	<opener tag="" id="I want you to leave!">
 		<response text="Don't be ridiculous!" />
 	</opener>
 	
-	<opener id="3">
+	<opener tag="intelligent" id="Ask me an intelligent question!">
 		<question text="Oh! All right then. Let's see.... What's your favourite optical phenomenon?">
 			<answer text="Bubbles!">
 				<script function="particlesFromSky" param="bubble"/>
@@ -41,27 +48,11 @@
 		
 	</opener>
 	
-	<opener id="4">
+	<opener tag="death" id="What happens when you die?">
 		<response text="If you're good you go to heaven... I hope so, at least." />
 	</opener>
 	
 	
-	
-	
-	<opener id="7">
-		<question text="What is your favorite banana?">
-			<answer text="plantin">
-				<script function="plantin" />
-			</answer>
-			<answer text="cavendich">
-				<response text="cavendich" />
-			</answer>
-			<answer text="small ones">
-				<response text="smallBananas" />
-			</answer>
-		</question>
-		
-	</opener>
 		
 		
 </dialog>

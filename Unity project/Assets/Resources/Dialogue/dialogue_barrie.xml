@@ -2,9 +2,9 @@
 
 
 <dialog name="Barrie">
-	<Brush-off text="[Casey seems to be asleep]" />
+	<brush-off text="[Casey seems to be asleep]" />
 	
-	<opener id="0">
+	<opener tag="" id="I'm bored!">
 		<question text="Boredom only gets worse as you get older. I empathise. I'll spawn you something. What would you like?" >
 			<answer text="A ball room!">
 				<script function="spawn" param="balls" />
@@ -18,39 +18,46 @@
 		</question>
 	</opener>
 	
-	<opener id="1">
-		<response text="I've been sad for years. You get over it. The trick is to avoid feeling sorry for yourself. Your mother is very strong. Stronger than her new partner anyway, hah! Jean would probably cry at my funeral, and we've only met twice!" />
+	<opener tag="" id="Are you sad?">
+		<question text="I've been sad for years. You get over it. The trick is to avoid feeling sorry for yourself. Your mother is very strong. Stronger than her new partner anyway, hah! Jean would probably cry at my funeral, and we've only met twice!" >
+			<answer text="When are you going to die?">
+				<multiple>
+					<response text="Hahaha! Pretty soon, I suppose."/>
+					<activate tag="death" />
+				<multiple/>
+			</answer>
+		</question>
 	</opener>
 	
-	<opener id="2">
+	<opener tag="" id="I want you to leave!">
 		<question text="Why?" >
 			<answer text="You're boring!">
 				<question text="What would you rather I be?">
 					<answer text="A bird!">
-						<script function="changeModels" tag="arm" param="bird" />
+						<script function="changeModels" tag="rightArm" param="bird" />
 					</answer>
 					<answer text="A pirate!">
-						<script function="changeModels" tag="leg" param="pegLeg" />
+						<script function="changeModels" tag="rightLeg" param="pegLeg" />
 					</answer>
 					<answer text="An arcade machine!">
 						<script function="changeModels" tag="torso" param="arcade" />
 					</answer>
 				</question>
 			</answer>
-			<answer text="Okay, both of you leave!">
+			<answer text="You're looking at me!">
 				<multiple>
-					<script function="disappear" param="Casey"/>
-					<script function="disappear" param="Stieg"/>
+					<script function="rotateX" />
+					<response text="then I won't look at you."/>
 				</multiple>
 			</answer>
-			<answer text="No, you stay! And turn around!">
-				<script function="flipAdultModels" param="yAxis" />
+			<answer text="I'm serious go away!">
+				<script function="disappear" param="Barrie" />
 			</answer>
 		</question>
 		
 	</opener>
 	
-	<opener id="3">
+	<opener tag="intelligent" id="Ask me an intelligent question!">
 		<question text="Hmm.... What's the worst condition to live with?">
 			<answer text="Parkinson's!">
 				<script function="vibrate" tag="arms"/>
@@ -65,14 +72,14 @@
 		
 	</opener>
 	
-	<opener id="4">
+	<opener tag="death" id="What happens when you die?">
 		<resp text="I like to think you just get to rest." />
 	</opener>
 	
 	
 	
 	
-	<opener id="7">
+	<opener tag="" id="7">
 		<question text="What is your favorite banana?">
 			<answer text="plantin">
 				<script function="plantin" />

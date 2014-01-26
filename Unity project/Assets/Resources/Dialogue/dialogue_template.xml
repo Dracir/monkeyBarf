@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<opener text="I'm bored!" activation="" id="0" />
-<opener text="Are you sad?" activation="" id="1" />
-<opener text="I want  you to leave!" activation="" id="2" />
-<opener text="Ask me an intelligent question!" activation="" id="3" />
-<opener text="Do you like pirates?" activation="" id="4" />
+<opener text="I'm bored!" activation="" id="I'm bored!" />
+<opener text="Are you sad?" activation="" id="Are you sad?" />
+<opener text="I want  you to leave!" activation="" id="I want you to leave!" />
+<opener text="Ask me an intelligent question!" activation="" id="Ask me an intelligent question!" />
+<opener text="Do you like pirates?" activation="" id="What happens when you die?" />
 
 
 <dialog>
 	<Brush-off text="Not right now, Sweetie." />
 
-	<opener id="0">
+	<opener id="I'm bored!">
 		<question text="Oh - well, the other kids are upstairs. Why don't you go up and play?" >
 			<answer text="There's not enough kids!">
 				<activate tag="adults2kids" />
@@ -24,11 +24,11 @@
 		</question>
 	</opener>
 					
-	<opener id="1">
+	<opener id="Are you sad?">
 		<response text="Sweetie... Yes, I ... I told you why, but... nevermind. You'll understand when you're older." />
 	</opener>
 					
-	<opener id="2">
+	<opener id="I want you to leave!">
 		<response text="Don't be ridiculous!" />
 	</opener>
 	

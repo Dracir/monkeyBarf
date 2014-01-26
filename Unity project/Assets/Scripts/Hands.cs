@@ -42,7 +42,7 @@ public class Hands : MonoBehaviour {
 		if (objectHolding != null){
 			Vector3 compensation = objectHolding.transform.position - objectHolding.collider.bounds.center;
 			float adjustedOffset = holdOffset + objectHolding.collider.bounds.extents.z * objectHolding.transform.localScale.z;
-			Vector3 holdPosition = Vector3.Lerp (t.position + t.forward * adjustedOffset, camera.position + camera.forward * adjustedOffset, 0.5f) + compensation;
+			Vector3 holdPosition = camera.position + camera.forward * adjustedOffset + compensation;
 			
 			objectHolding.transform.position = holdPosition;
 			objectHolding.transform.rotation = Quaternion.LookRotation(camera.forward, camera.up);

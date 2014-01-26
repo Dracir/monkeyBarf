@@ -550,6 +550,10 @@ function IsGrounded () {
 	return grounded;
 }
 
+function SetJumpHeight(height: float) {
+	this.jumping.baseHeight = height;
+}
+
 function TooSteep () {
 	return (groundNormal.y <= Mathf.Cos(controller.slopeLimit * Mathf.Deg2Rad));
 }

@@ -116,7 +116,7 @@ public class DialogLoader {
 	}
 	
 	public ScriptCall readScript(){
-		ScriptCall scriptCall = new ScriptCall(reader.GetAttribute("function"),reader.GetAttribute("param"));
+		ScriptCall scriptCall = new ScriptCall(reader.GetAttribute("function"),reader.GetAttribute("tag"),reader.GetAttribute("param"));
 		reader.Read ();
 		return scriptCall;
 	}

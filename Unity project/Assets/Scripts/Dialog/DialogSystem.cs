@@ -24,11 +24,13 @@ public class DialogSystem : GuiScript {
 	private bool clicked = false;
 
 	private ShotCaller shotCaller;
+	private PlayerControler playerControler;
 
 	void Start () {
 		questionMouseRegion = new List<MouseRegion> ();
 		textStyle = generateFont (18, font, Color.black);
 		shotCaller = (ShotCaller) GameObject.FindGameObjectWithTag ("TheGame").GetComponent<ShotCaller> ();
+		playerControler = (PlayerControler) GameObject.FindGameObjectWithTag ("ThePlayer").GetComponent<PlayerControler> ();
 	}
 	
 	void Update () {
@@ -76,6 +78,7 @@ public class DialogSystem : GuiScript {
 		textWriter = null;
 		exitOnClick = false;
 		clicked = false;
+		playerControler.stopFixing ();
 	}
 	public void switchTo(Dialog nextDialog){
 		questionMouseRegion.Clear ();
@@ -105,7 +108,7 @@ public class DialogSystem : GuiScript {
 				character.activate (a.tag);
 			} else if(d is ScriptCall){
 				ScriptCall s = (ScriptCall) d;
-				shotCaller.execute (s.script, s.param);
+				shotCaller.execute (s.script, s.tag, s.param);
 			}
 		}
 		if (!multiple.text.Equals ("")) {
@@ -117,7 +120,7 @@ public class DialogSystem : GuiScript {
 	}
 
 	private void doScriptCall(ScriptCall script){
-		shotCaller.execute (script.script, script.param);
+		shotCaller.execute (script.script, script.tag,script.param);
 		switchTo(script.nextDialog);
 	}
 
@@ -148,6 +151,7 @@ public class DialogSystem : GuiScript {
 	
 	public void startDialogWith(CharacterDialog character){
 		this.character = character;
+		playerControler.fix (character.transform);
 		
 		if (!character.hasActiveOpenner()) {
 			string text = "";

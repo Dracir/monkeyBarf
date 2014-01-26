@@ -24,6 +24,10 @@ public class AdultControler : MonoBehaviour {
 		overHeadName.text = name;
 	}
 
+	public string getName(){
+		return dialog.name;
+	}
+
 	public void showName(){
 		overHeadNameGameObject.SetActive (true);
 	}
@@ -31,4 +35,5 @@ public class AdultControler : MonoBehaviour {
 	public void hideName(){
 		overHeadNameGameObject.SetActive (false);
 	}
+
 }

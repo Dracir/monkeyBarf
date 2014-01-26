@@ -7,7 +7,7 @@ public class AdultGroupControler : MonoBehaviour {
 	private AdultControler[] adultControlers;
 
 	void Start () {
-		adults = GameObject.FindGameObjectsWithTag ("Adult");
+		adults = GameObject.FindGameObjectsWithTag ("adult");
 		adultControlers = new AdultControler[adults.Length];
 		int index = 0;
 		foreach (GameObject adult in adults) {
@@ -30,6 +30,15 @@ public class AdultGroupControler : MonoBehaviour {
 		foreach (AdultControler adult in adultControlers) {
 			adult.showName();
 		}
+	}
+
+	public AdultControler getAdultWithName(string name){
+		foreach (AdultControler adult in adultControlers) {
+			if(adult.getName().Equals(name)){
+				return adult;
+			}
+		}
+		return null;
 	}
 }
 

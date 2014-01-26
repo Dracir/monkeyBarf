@@ -10,6 +10,11 @@ public class ShotCaller : MonoBehaviour {
 	void Start () {
 		adultGroupControler = (AdultGroupControler)this.gameObject.GetComponent<AdultGroupControler> ();
 		playerControler = (PlayerControler)GameObject.FindGameObjectWithTag ("ThePlayer").GetComponent<PlayerControler> ();
+		
+		Animator[] animators = FindObjectsOfType(typeof(Animator)) as Animator[];
+		foreach (Animator item in animators) {
+			item.playbackTime = Random.Range(0, 6f);
+		}
 	}
 
 
@@ -58,15 +63,26 @@ public class ShotCaller : MonoBehaviour {
 		}else if (functionName.Equals ("color")) {
 			Renderer[] renderers = FindObjectsOfType(typeof(Renderer)) as Renderer[];
 			foreach (Renderer item in renderers) {
-				Color color = null;
+				Color color;
 				if(param.Equals("chartreuse")){
 					color = new Color(147f/255f, 200f/255f, 49f/255f, 1f);
+				}else if (param.Equals ("pink")){
+					color = new Color(254f/255f, 160f/255f, 196f/255f, 1f);
+				}else if (param.Equals ("blue")){
+					color = Color.blue;
+				}else {
+					color = Color.magenta;
 				}
 				item.material.color = color;
 			}
 		}else if (functionName.Equals ("attachTo")) {
 			AdultControler adult = adultGroupControler.getAdultWithName(param);
 			playerControler.attachTo(adult);
+		}else if (functionName.Equals ("setAnimationTimeScale")){
+			Animator[] animators = FindObjectsOfType(typeof(Animator)) as Animator[];
+			foreach (Animator item in animators) {
+				item.speed = float.Parse (param);
+			}
 		}
 	}
 
